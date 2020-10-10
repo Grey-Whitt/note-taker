@@ -1,6 +1,9 @@
+//requirements
 const express = require('express')
 const PORT = process.env.PORT || 3001
 const app = express()
+
+//HTML and API routes
 const htmlRoutes = require('./routes/htmlRoutes')
 const apiRoutes = require('./routes/apiRoutes')
 
