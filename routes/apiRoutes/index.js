@@ -33,12 +33,12 @@ router.delete('/api/notes/:id', (req, res) => {
     const noteId = req.params.id
 
     const newNotes = notes.filter(note => note.id != noteId)
-    res.json(noteId)
+    
     fs.writeFileSync(
         path.join(__dirname, '../../db/db.json'),
         JSON.stringify(newNotes, null, 2)
     );
-    
+
 })
 
 
