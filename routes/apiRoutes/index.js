@@ -31,13 +31,18 @@ router.post('/api/notes', (req, res) => {
     
 })
 
+//route to delete requested note based on id
 router.delete('/api/notes/:id', (req, res) => {
+    //sets noteId to the id in the query
     const noteId = req.params.id
 
+    //takes noteId and uses it to find the note we want to delete
     const note = notes.findIndex(note => note.id === noteId);
  
+    //removes note from the array
     notes.splice(note, 1);
     
+    //writes in the db with the updated array
     res.json(noteId)
     fs.writeFileSync(
         path.join(__dirname, '../../db/db.json'),
