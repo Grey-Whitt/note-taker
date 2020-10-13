@@ -3,6 +3,7 @@
 
 ## Description
 This is a backend project demonstrating my use of express to create api routes. The project allows you to take notes, store them on a server and delete them from.
+Check it out here - https://gw-note-taker.herokuapp.com/
 
 ![Home Page](./public/assets/css/homepage.png)
 ![Note Page](./public/assets/css/notes.png)
